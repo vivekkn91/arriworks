@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import "./index.css";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import reportWebVitals from "./reportWebVitals";
+import Naviagtion from "./naviagation";
+// import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      {/* <TawkMessengerReact
+        propertyId="647870f574285f0ec46eee0d"
+        widgetId="1h1r7ig49"
+      /> */}
+      <Naviagtion />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
