@@ -1,0 +1,71 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+# Prerendered static pages first, then the SPA fallback.
+[[redirects]]
+  from = "/custom/Maggam-design-works"
+  to = "/custom/maggam-design-works"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/custom/Hand-thread-work-embroidery"
+  to = "/custom/hand-thread-work-embroidery"
+  status = 301
+  force = true
+
+# Legacy URLs. Prerendered pages are served straight from the publish directory,
+# so the only redirects needed here are the old paths plus a SPA fallback.
+# build/_redirects mirrors these rules for drag-and-drop deploys; when
+# netlify.toml is present Netlify uses this file and ignores _redirects.
+[[redirects]]
+  from = "/product"
+  to = "/designs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/"
+  to = "/services"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"

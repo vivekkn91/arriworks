@@ -1,282 +1,187 @@
-import logo from "./accests/icon/logo-color.png";
-import "./accests/css/style.css";
-import { Helmet } from "react-helmet";
+import React from "react";
 import { Link } from "react-router-dom";
 
-import "./accests/css/responsive.css";
 import Navbar from "./components/navbar";
-import aari from "./accests/icon/aariwor.png";
-
 import Cards from "./components/cards";
+import Footer from "./components/Footer";
+import Faq from "./components/Faq";
+import ServiceList from "./components/ServiceList";
+import Seo from "./seo/Seo";
+import SITE from "./seo/site";
+import { home } from "./seo/meta";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faFacebook,
-  faTwitter,
-  faWhatsapp,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   return (
     <>
-      <body className="main-layout">
-        <Helmet>
-          <title>
-            Aari Work Blouse Hand Designs | Custom Handwork Designs for Blouses
-            | Maggam Design Works
-          </title>
-          <meta
-            name="description"
-            content="At our studio in kochi, we specialize in creating custom handwork designs for blouses that are as unique as you are. Our skilled artisans bring your vision to life with exquisite embroidery, delicate beadwork, and personalized details. Elevate your style with our one-of-a-kind creations."
-          />
-
-          <link rel="icon" type="image/png" href={logo} />
-        </Helmet>
-        <Navbar />
-
+      <Seo
+        title={home.title}
+        description={home.description}
+        keywords={home.keywords}
+        path="/"
+        faqs={home.faqs}
+        breadcrumb={home.breadcrumb}
+      />
+      <Navbar />
+      <main>
+        {/* Hero Banner */}
         <section className="bannersection">
-          <h1 className="text-center bannertext h2">
-            {" "}
-            Custom Bridal Aari Embroidery Designs for You!{" "}
+          <span className="banner-badge">✨ Handcrafted in Thriprayar, Thrissur</span>
+          <h1 className="bannertext h2">
+            Aari Work, Bridal Makeup &amp; Mehandi Studio in Thriprayar
           </h1>
-          <h2 className="text-center bannertext">
-            We undertake Aari work, Hand work orders from Boutiques and Tailor
-            shops and do at lowest rate in Market AARI, ZARDOSHI, MAGGAM WORK,
-            MIRROR WORK, CUT WORK, BEAD WORK, MACHINE EMBROIDERY, SAREE TASSELS
-            AND ALL KIND OF ORDERS TAKEN
-          </h2>
-        </section>
-        <section className="works">
-          <div>
-            <h3>HEAVY AARI BRIDAL</h3>
-          </div>
-          <div>
-            <h3>MEDIUM AARI WORKS</h3>
-          </div>
-          <div>
-            <h3>SIMPLE AARI WORKS</h3>
-          </div>
-          <div>
-            <h3>BRIDAL AARI WORKS</h3>
+          <p className="bannertext">
+            Complete bridal services in Thriprayar, Thrissur: Bespoke Aari &amp; Maggam embroidery, 
+            professional HD Bridal Makeup, customized bridal mehandi, zardoshi, and designer blouses 
+            for brides, boutiques, and tailor shops across Kerala.
+          </p>
+          <div className="hero-actions">
+            <a
+              href={SITE.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-hero-primary"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} /> Chat on WhatsApp
+            </a>
+            <Link to="/services" className="btn-hero-secondary">
+              Explore All Services
+            </Link>
           </div>
         </section>
 
+        {/* Feature Highlights */}
+        <section className="works" aria-label="Work Categories">
+          <div>
+            <h2>Bridal Aari Work</h2>
+            <p style={{ margin: "4px 0 0", fontSize: "0.88rem", color: "var(--text-muted)" }}>
+              Rich Zari, Cutbeads &amp; Kundan
+            </p>
+          </div>
+          <div>
+            <h2>Bridal Makeup</h2>
+            <p style={{ margin: "4px 0 0", fontSize: "0.88rem", color: "var(--text-muted)" }}>
+              HD Makeover, Draping &amp; Hair
+            </p>
+          </div>
+          <div>
+            <h2>Bridal Mehandi</h2>
+            <p style={{ margin: "4px 0 0", fontSize: "0.88rem", color: "var(--text-muted)" }}>
+              Organic Henna &amp; Arabic Motifs
+            </p>
+          </div>
+          <div>
+            <h2>Custom Maggam Work</h2>
+            <p style={{ margin: "4px 0 0", fontSize: "0.88rem", color: "var(--text-muted)" }}>
+              Bespoke Designs for Boutiques
+            </p>
+          </div>
+        </section>
+
+        {/* Gallery Title & Cards */}
         <div className="titlepage">
-          {" "}
-          <h2 className="text-center"> Check our Aari Work Designs</h2>
-          <p className="text-center">
-            Have Your own Aari Work designs share your idea and we can cutom
-            create it for you{" "}
+          <h2>Featured Hand Work Designs</h2>
+          <p>
+            Have your own blouse design or Pinterest reference? Share your image with us on WhatsApp 
+            and our artisans will customize the pattern exactly to your fabric and measurements.
           </p>
         </div>
         <Cards />
-        <div id="service" className="service">
-          <div className="container">
-            <div className="row">
-              <div className="titlepage">
-                <h2> Our Services</h2>
-              </div>
-            </div>
-          </div>
-          <div className="outerbox">
-            <Link to={`/custom/aari-work-design`}>
-              <div id="hover_chang" className="service_box">
-                <h3>custom Aari work designs</h3>
-                <p>we design Aari handworks designs</p>
-              </div>
-            </Link>
-            <Link to={`/custom/handworks-design`}>
-              <div id="hover_chang" className="service_box">
-                <h3>custom handworks designs</h3>
-                <p>we design custom handworks designs</p>
-              </div>
-            </Link>
-            <Link to={`/custom/hand-embroidery-beads-work`}>
-              <div id="hover_chang" className="service_box">
-                <h3>hand embroidery beads work</h3>
-                <p>we design custom aari designs</p>
-              </div>
-            </Link>
-            <Link to={`/custom/Hand-thread-work-embroidery`}>
-              <div id="hover_chang" className="service_box">
-                <h3>Hand thread work embroidery</h3>
-                <p>we design handworks blouse designs</p>
-              </div>
-            </Link>
-            <Link to={`/custom/Maggam-design-works`}>
-              <div id="hover_chang" className="service_box">
-                <h3>Maggam design works</h3>
-                <p>we design maggam blouse designs</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-        <div className="content">
-          <p>
-            At our boutique, we specialize in Aari work, offering exceptional
-            craftsmanship at the most affordable rates in the market. With our
-            expertise in Aari, Zardoshi, Maggam work, mirror work, cut work,
-            bead work, machine embroidery, saree tassels, and more, we cater to
-            the diverse needs of boutiques and tailor shops. Our skilled
-            artisans bring their passion and creativity to every project,
-            ensuring exquisite results that surpass expectations.{" "}
-          </p>
-          <p>
-            When you choose us for your Aari work orders, you can expect nothing
-            but the highest quality and attention to detail. We take pride in
-            our ability to create intricate designs that showcase the beauty of
-            this traditional art form. Whether it's embellishing sarees,
-            blouses, or other clothing items, our team meticulously handcrafts
-            each piece, using premium materials such as silk threads, zari,
-            sequins, beads, and mirrors. The end result is a stunning
-            masterpiece that reflects the unique style and personality of the
-            wearer.
-          </p>{" "}
-          <p>
-            What sets us apart is not only our craftsmanship but also our
-            commitment to affordability. We believe that everyone should have
-            access to the beauty of Aari work, regardless of budget constraints.
-            By offering our services at the lowest rates in the market, we
-            ensure that boutique owners and tailor shops can provide their
-            customers with exquisite Aari work without compromising on quality.
-          </p>
-          <p>
-            With our extensive range of services and dedication to customer
-            satisfaction, we have built a reputation as a trusted provider of
-            Aari work. We value the partnerships we establish with our clients
-            and work closely with them to understand their specific
-            requirements. Whether you need a single order or regular
-            collaborations, we are here to deliver exceptional Aari work that
-            exceeds your expectations.
-          </p>
-          <p>
-            What sets us apart is not only our craftsmanship but also our
-            commitment to affordability. We believe that everyone should have
-            access to the beauty of Aari work, regardless of budget constraints.
-            By offering our services at the lowest rates in the market, we
-            ensure that boutique owners and tailor shops can provide their
-            customers with exquisite Aari work without compromising on quality.
-          </p>
-        </div>
-        {/* <div id="contact" className="contact">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="titlepage">
-                  <h2>
-                    {" "}
-                    Request <span className="white"> A call Back</span>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <form
-                  id="request"
-                  className="main_form"
-                  name="contact6"
-                  method="post"
-                >
-                  <input type="hidden" name="form-name" value="contact6" />
-                  <div className="row">
-                    <div className="col-md-12 ">
-                      <input
-                        className="contactus"
-                        placeholder="Name"
-                        type="text"
-                        name="Name"
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <input
-                        className="contactus"
-                        placeholder="Email"
-                        type="email"
-                        name="Email"
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <input
-                        className="contactus"
-                        placeholder="Phone Number"
-                        type="tel"
-                        name="Phone Number"
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <textarea
-                        className="textarea"
-                        placeholder="Message"
-                        name="Message"
-                      ></textarea>
-                    </div>
-                    <div className="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                      <button className="send_btn" type="submit">
-                        Send
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
-        <footer id="contact">
-          <div className="footer">
-            {" "}
-            <div className="social-media-icons">
-              <a
-                href="https://www.instagram.com/handworkbyalka"
-                aria-label="Instagram"
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="icon instagram-icon"
-                />
-              </a>
-              <a
-                href="https://in.pinterest.com/alkasukumaran"
-                className="pinterest"
-                aria-label="Pinterest"
-              >
-                <FontAwesomeIcon
-                  icon={faPinterest}
-                  className="icon pinterest-icon"
-                />
-              </a>
-              <a
-                href="https://wa.me/916238573109"
-                className="whatsapp"
-                aria-label="WhatsApp"
-              >
-                <FontAwesomeIcon
-                  icon={faWhatsapp}
-                  className="icon whatsapp-icon"
-                />
-              </a>
-            </div>
-            <div className="copyright">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <p>
-                      © 2023 All Rights Reserved.{" "}
-                      <a href="https://billingkopos.com/"> billingko</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Studio Story Section */}
+        <section className="content" id="about-studio">
+          <h2>Why Boutiques &amp; Brides in Thriprayar Choose Our Studio</h2>
+          <p>
+            <strong>
+              Handworks &amp; Embroidery by Alka is a premier bridal studio and hand embroidery atelier in
+              Thriprayar, Thrissur, Kerala.
+            </strong>{" "}
+            We provide an all-in-one destination for brides: customized Aari work &amp; maggam blouse embroidery, 
+            professional HD Bridal Makeup, customized chemical-free bridal mehandi, saree draping, and intricate bead embellishments.
+          </p>
+          <p>
+            Whether you are preparing for your wedding muhurtham, engagement, or reception, we offer complete bridal makeover services 
+            at our Thriprayar studio or at your wedding venue anywhere across Thrissur district.
+          </p>
+          <p>
+            We also partner with boutique owners and tailor shops across Thriprayar, Guruvayur, Kodungallur, Kochi, 
+            and throughout Kerala for bulk embroidery orders and sample displays.
+          </p>
+          <div className="buys" style={{ marginTop: "24px" }}>
+            <a
+              className="button"
+              href={SITE.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} /> Book Bridal Services on WhatsApp
+            </a>
+            <Link
+              to="/custom/bridal-makeup"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                color: "var(--primary)",
+                fontWeight: "600",
+                padding: "12px 20px",
+                borderRadius: "var(--radius-full)",
+                background: "var(--primary-light)",
+                border: "1px solid rgba(125, 17, 40, 0.2)"
+              }}
+            >
+              Bridal Makeup Details
+            </Link>
+            <Link
+              to="/custom/bridal-mehandi"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                color: "var(--primary)",
+                fontWeight: "600",
+                padding: "12px 20px",
+                borderRadius: "var(--radius-full)",
+                background: "var(--primary-light)",
+                border: "1px solid rgba(125, 17, 40, 0.2)"
+              }}
+            >
+              Bridal Mehandi Details
+            </Link>
           </div>
-        </footer>
-      </body>
+        </section>
+
+        {/* Services Overview */}
+        <ServiceList
+          heading="Bridal, Makeup &amp; Embroidery Services"
+          intro="Explore our complete range of bridal makeovers, organic henna, and hand stitching crafted in Thriprayar, Thrissur."
+        />
+
+        {/* Delivery & Areas */}
+        <section className="content service-area">
+          <h2>Areas We Serve &amp; Fast Courier Delivery</h2>
+          <p>
+            Based in Thrissur, we proudly serve clients and boutiques in {SITE.areaServed.join(", ")}. 
+            For customers outside Thrissur, we share live video/photo progress updates on WhatsApp and deliver 
+            securely across India via insured courier services.
+          </p>
+        </section>
+
+        {/* FAQs */}
+        <Faq items={SITE.faqs} />
+
+        {/* Call to Action Band */}
+        <section className="cta-band">
+          <h2>Order Your Custom Blouse Embroidery Today</h2>
+          <p>
+            Get a fast quote for your dream blouse design. Message us on WhatsApp at{" "}
+            <a href={SITE.whatsappUrl}>{SITE.phone}</a> or{" "}
+            <Link to="/contact">fill our online enquiry form</Link>.
+          </p>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }

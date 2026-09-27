@@ -1,96 +1,140 @@
 import React, { useState } from "react";
-import logo from "../accests/icon/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import SITE from "../seo/site";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faMapMarkerAlt, faPhone, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+const logoSrc = `${process.env.PUBLIC_URL || ""}/images/logo.png`;
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
 
   const handleNavToggle = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
-    <header>
-      <div className="header">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xl-5 col-lg-5 col-md-9 col-sm-9">
-              <nav className="navigation navbar navbar-expand-md navbar-dark">
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  onClick={handleNavToggle}
-                  aria-expanded={isNavOpen}
-                  aria-label="Toggle navigation"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  className={`collapse navbar-collapse ${
-                    isNavOpen ? "show" : ""
-                  }`}
-                >
-                  <ul className="navbar-nav mr-auto">
-                    <Link to="/">
-                      <li className="nav-item active nav-link"> Home </li>
-                    </Link>{" "}
-                    <Link to="/about">
-                      <li className="nav-item nav-link">About</li>{" "}
-                    </Link>
-                    {/* <li className="nav-item">
-                      <a className="nav-link" href="#service">
-                        Service
-                      </a>
-                    </li> */}
-                    <Link to="/designs">
-                      <li className="nav-item  nav-link">Our Works</li>
-                    </Link>
-                    {/* <li className="nav-item">
-                      <a className="nav-link" href="#contact">
-                        Contact Us
-                      </a>
-                    </li> */}
-                  </ul>
-                </div>
-              </nav>
-            </div>
-            <div className="col-xl-2 col-lg-2 col-md-3 col-sm-3 col logo_section">
-              <div className="full">
-                <div className="center-desk">
-                  <div className="logo">
-                    <img src={logo} alt="handwork designs by alka" />
-                    <ul className="email3">
-                      <li>
-                        <a href="https://wa.me/916238573109">
-                          whatsapp: (+91) 6238573109
-                        </a>
-                      </li>
-                      <li>
-                        <a href="mailto:alkasukumaran2015@gmail.com">
-                          Email: alkasukumaran2015@gmail.com
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-5 col-lg-5 col-md-5 col-sm-5">
-              <ul className="email">
-                <li>
-                  <a href="https://wa.me/916238573109">
-                    whatsapp: (+91) 6238573109
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:alkasukumaran2015@gmail.com">
-                    Email: alkasukumaran2015@gmail.com
-                  </a>
-                </li>
-              </ul>
-            </div>
+    <header className="site-header">
+      {/* Top utility contact bar */}
+      <div className="top-bar">
+        <div className="top-bar-inner">
+          <div className="top-bar-location">
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+            <span>Thriprayar, Thrissur &bull; Handcrafted Aari &amp; Bridal Embroidery</span>
+          </div>
+          <div className="top-bar-contacts">
+            <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faWhatsapp} />
+              <span>WhatsApp: {SITE.phone}</span>
+            </a>
+            {SITE.secondaryPhone ? (
+              <a href={`tel:${SITE.secondaryPhoneHref}`}>
+                <FontAwesomeIcon icon={faPhone} />
+                <span>Alt: {SITE.secondaryPhone}</span>
+              </a>
+            ) : null}
           </div>
         </div>
+      </div>
+
+      {/* Main Navigation Bar */}
+      <div className="nav-container">
+        <div className="brand-logo-wrap">
+          <Link to="/" className="brand-logo" onClick={closeNav}>
+            <img src={logoSrc} alt={`${SITE.name} — Hand work studio in Thrissur`} />
+            <div className="brand-text">
+              <span className="brand-title">Handwork Designs</span>
+              <span className="brand-subtitle">By Alka &bull; Thrissur</span>
+            </div>
+          </Link>
+        </div>
+
+        {/* Desktop Navigation Links */}
+        <nav aria-label="Main Navigation">
+          <ul className="desktop-nav">
+            <li>
+              <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className={location.pathname.startsWith("/services") ? "active" : ""}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/designs" className={location.pathname.startsWith("/designs") ? "active" : ""}>
+                Our Works
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a
+                href={SITE.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-cta-btn"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} />
+                <span>Enquire Now</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Mobile menu toggle */}
+        <button
+          className="mobile-toggle"
+          onClick={handleNavToggle}
+          aria-label="Toggle navigation menu"
+        >
+          <FontAwesomeIcon icon={isNavOpen ? faTimes : faBars} />
+        </button>
+      </div>
+
+      {/* Mobile Drawer */}
+      <div className={`mobile-menu-drawer ${isNavOpen ? "open" : ""}`}>
+        <Link to="/" onClick={closeNav}>
+          Home
+        </Link>
+        <Link to="/services" onClick={closeNav}>
+          Services
+        </Link>
+        <Link to="/designs" onClick={closeNav}>
+          Our Works
+        </Link>
+        <Link to="/about" onClick={closeNav}>
+          About
+        </Link>
+        <Link to="/contact" onClick={closeNav}>
+          Contact
+        </Link>
+        <a
+          href={SITE.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-cta-btn"
+          style={{ marginTop: "12px", justifyContent: "center" }}
+          onClick={closeNav}
+        >
+          <FontAwesomeIcon icon={faWhatsapp} />
+          <span>Enquire on WhatsApp</span>
+        </a>
       </div>
     </header>
   );

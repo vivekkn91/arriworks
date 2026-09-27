@@ -1,119 +1,128 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-
-import Nav from "./navbar";
+import { Link, useParams } from "react-router-dom";
+import Navbar from "./navbar";
+import Footer from "./Footer";
+import Breadcrumbs from "./Breadcrumbs";
+import Faq from "./Faq";
 import Cards from "./cards";
-import { Helmet } from "react-helmet";
+import Seo from "../seo/Seo";
+import { getServiceMeta } from "../seo/meta";
+import SITE, { serviceBySlug } from "../seo/site";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faFacebook,
-  faTwitter,
-  faWhatsapp,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Custom() {
   const { work } = useParams();
+  const service = serviceBySlug(work);
 
-  // Generate SEO-friendly content based on the work
-  const getPageTitle = () => {
-    switch (work) {
-      case "aari-work-design":
-        return "Aari Work Design";
-      case "handworks-design":
-        return "Custom Handworks Designs ";
-      case "hand-embroidery-beads-work":
-        return "Hand Embroidery Beads Work";
-      case "Hand-thread-work-embroidery":
-        return "Hand Thread Work Embroidery ";
-      case "Maggam-design-works":
-        return "Maggam Design Works";
-      default:
-        return "Custom Design Works ";
-    }
-  };
+  if (!service) {
+    return (
+      <>
+        <Seo
+          title={`Hand work service not found | ${SITE.name}`}
+          description="This hand work service page is not available. See all Aari work, maggam work, bead work and thread work services from our Thrissur studio."
+          path={`/custom/${work}`}
+          noindex
+          breadcrumb={[{ name: "Home", path: "/" }]}
+        />
+        <Navbar />
+        <main className="custum">
+          <h1>Service not found</h1>
+          <p>
+            We could not find that service. Please see all our{" "}
+            <Link to="/services">hand work and embroidery services</Link> or{" "}
+            <Link to="/contact">contact us</Link>.
+          </p>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
-  const getPageDescription = () => {
-    switch (work) {
-      case "aari-work-design":
-        return "We specialize in creating Aari work design. Discover unique and personalized handwork designs ";
-
-      case "handworks-design":
-        return "We specialize in creating custom handworks designs. Discover unique and personalized handwork designs at Your Handwork Designs by Alka.";
-      case "hand-embroidery-beads-work":
-        return "Explore our exquisite collection of hand embroidery beads work. Our skilled artisans create beautiful and intricate designs at Your Handwork Designs by Alka.";
-      case "Hand-thread-work-embroidery":
-        return "Elevate your style with our hand thread work embroidery. Discover a range of handwork blouse designs at Your Handwork Designs by Alka.";
-      case "Maggam-design-works":
-        return "Experience the beauty of Maggam design works. Our talented team creates stunning maggam blouse designs at Your Handwork Designs by Alka.";
-      default:
-        return "Discover unique and customized handworks designs at Your Handwork Designs by Alka. We specialize in creating beautiful and personalized works.";
-    }
-  };
-
-  const pageTitle = getPageTitle();
-  const pageDescription = getPageDescription();
+  const meta = getServiceMeta(service);
+  const whatsappText = encodeURIComponent(
+    `Hello ${SITE.name}, I would like to order ${service.name} in Thrissur, Kerala. My design reference and blouse measurements are attached.`
+  );
 
   return (
     <>
-      <Helmet>
-        <title>{pageTitle} | Handwork Designs by Alka</title>
-      </Helmet>
-      <Nav />
-      <div className="text-center custum">
-        {" "}
-        <h1>{pageTitle}</h1>
-        <p>{pageDescription}</p>
-      </div>
-      <Cards />{" "}
-      <div className="text-center custum">
-        {" "}
-        <h1>
-          {" "}
-          We do Custom Aari Simple Design & Simple Aari Work Blouse Design
-        </h1>
-        <p></p>
-      </div>
-      <footer id="contact">
-        <div className="footer">
-          {" "}
-          <div className="social-media-icons">
-            <a href="https://www.instagram.com/handworkbyalka">
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="icon instagram-icon"
-              />
+      <Seo
+        title={meta.title}
+        description={meta.description}
+        keywords={meta.keywords}
+        path={meta.path}
+        faqs={service.faqs}
+        service={service}
+        breadcrumb={meta.breadcrumb}
+      />
+      <Navbar />
+      <main>
+        <Breadcrumbs trail={meta.breadcrumb} />
+        <div className="titlepage">
+          <h2>{meta.h1}</h2>
+          <p className="lead">{service.tagline}</p>
+        </div>
+
+        <section className="content service-detail">
+          <h2>What is {service.name}?</h2>
+          <p>{service.summary}</p>
+          <h2>What is included</h2>
+          <ul style={{ paddingLeft: "20px", marginBottom: "24px" }}>
+            {service.details.map((detail) => (
+              <li key={detail} style={{ color: "var(--text-main)", marginBottom: "8px" }}>{detail}</li>
+            ))}
+          </ul>
+          <h2>Price and delivery time</h2>
+          <p>
+            {service.name} in our Thrissur studio is <strong>{service.price}</strong>, and a
+            typical order is finished in <strong>{service.turnaround}</strong>. Bulk orders from
+            boutiques and tailor shops get a better rate per blouse, so send us
+            your design list on WhatsApp for a quotation.
+          </p>
+          <h2>Where we work</h2>
+          <p>
+            We take {service.name} orders in Thrissur, Kerala and supply
+            boutiques and tailor shops in {SITE.areaServed.join(", ")}. Orders
+            are taken in person at our studio or over WhatsApp, and finished
+            work is delivered anywhere in India.
+          </p>
+          <div className="buys">
+            <a
+              className="button"
+              href={`${SITE.whatsappUrl}?text=${whatsappText}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} /> Order {service.shortName} on WhatsApp
             </a>
             <a
-              href="https://in.pinterest.com/alkasukumaran"
-              className="pinterest"
+              href={`mailto:${SITE.email}?subject=${encodeURIComponent(service.name)}`}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                color: "var(--primary)",
+                fontWeight: "600",
+                padding: "12px 20px",
+                borderRadius: "var(--radius-full)",
+                background: "var(--primary-light)",
+                border: "1px solid rgba(125, 17, 40, 0.2)"
+              }}
             >
-              <FontAwesomeIcon
-                icon={faPinterest}
-                className="icon pinterest-icon"
-              />
-            </a>
-            <a href="https://wa.me/916238573109" className="whatsapp">
-              <FontAwesomeIcon
-                icon={faWhatsapp}
-                className="icon whatsapp-icon"
-              />
+              <FontAwesomeIcon icon={faEnvelope} /> Email About {service.shortName}
             </a>
           </div>
-          <div className="copyright">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <p>© 2023 All Rights Reserved. handwork designs by alka</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </section>
+
+        <section className="related">
+          <h2>{service.shortName} Blouse Designs</h2>
+          <Cards limit={4} />
+        </section>
+
+        <Faq items={service.faqs} heading={`${service.shortName} Questions`} />
+      </main>
+      <Footer />
     </>
   );
 }

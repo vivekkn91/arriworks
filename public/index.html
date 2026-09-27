@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo-color.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#8a1c3a" />
     <meta
       name="google-site-verification"
       content="xSoM7cMG3UfIEPE7icrmpRi6UgLsaUTBimj8_LNRF94"
+    />
+    <meta
+      name="google-site-verification"
+      content="googlec7e60cab7228c199"
+    />
+
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon-32.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+
+    <link
+      rel="preconnect"
+      href="https://cdnjs.cloudflare.com"
+      crossorigin
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://cdn.jsdelivr.net"
+      crossorigin
     />
 
     <link
       rel="stylesheet"
       href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
     />
-    <!-- <meta
-      name="google-site-verification"
-      content="2uJWrOvLfV7zN-OEEpqvP41uRUcBmoQTkhTJ8I-2qEw"
-    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen"
     />
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link
       rel="stylesheet"
@@ -35,15 +43,6 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =
@@ -60,46 +59,28 @@
     </script>
   </head>
   <body>
-    <form name="contact6" netlify netlify-honeypot="bot-field" hidden>
+    <form name="handwork-enquiry" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="Name" />
-      <input type="text" name="Email" />
+      <input type="tel" name="Phone" />
       <input type="email" name="Email" />
-      <input type="text" name="Phone Number" />
+      <input type="text" name="Service" />
       <textarea name="Message"></textarea>
     </form>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <p>
+        <strong>
+          Handworks &amp; Embroidery by Alka — Aari &amp; Hand Work Blouse Designs
+          in Thrissur, Kerala
+        </strong>
+      </p>
+      <p>
+        We are a hand work and Aari embroidery studio in Thrissur, Kerala. We
+        undertake Aari work, hand work, maggam work, mirror work, cut work, bead
+        work, thread work and machine embroidery orders for boutiques, tailor
+        shops and personal customers.
+      </p>
+      <p>WhatsApp +91 70257 46783 (or call +91 62385 73109) or email alkasukumaran2015@gmail.com.</p>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery-3.0.0.min.js"></script>
-  <!-- sidebar -->
-  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script>
-    $('a[href^="#"]').on("click", function (event) {
-      var target = $(this.getAttribute("href"));
-
-      if (target.length) {
-        event.preventDefault();
-        $("html, body").stop().animate(
-          {
-            scrollTop: target.offset().top,
-          },
-          2000
-        );
-      }
-    });
-  </script>
 </html>

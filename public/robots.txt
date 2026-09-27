@@ -1,3 +1,55 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for https://handwork-design-by-alka.netlify.app
+# Handworks & Embroidery by Alka - hand work / Aari embroidery studio, Thrissur, Kerala
+
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /product
+
+# AI and generative search crawlers are explicitly welcome.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+Sitemap: https://handwork-design-by-alka.netlify.app/sitemap.xml
+Sitemap: https://handwork-design-by-alka.netlify.app/sitemap-image.xml

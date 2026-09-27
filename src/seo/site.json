@@ -1,0 +1,353 @@
+{
+  "name": "Handworks & Embroidery by Alka",
+  "legalName": "Handworks & Embroidery by Alka",
+  "shortName": "Handworks by Alka",
+  "url": "https://handwork-design-by-alka.netlify.app",
+  "locale": "en_IN",
+  "lang": "en-IN",
+  "themeColor": "#8a1c3a",
+  "image": "/images/og-image.jpg",
+  "logo": "/images/logo-color.png",
+  "description": "Handworks & Embroidery by Alka is a hand work and Aari embroidery studio in Thrissur, Kerala. Custom hand work blouse designs, Aari work, maggam work, bead work and bridal hand embroidery for boutiques, tailor shops and personal orders across Kerala.",
+  "phone": "+91 70257 46783",
+  "phoneHref": "tel:+917025746783",
+  "whatsapp": "917025746783",
+  "secondaryPhone": "+91 62385 73109",
+  "secondaryPhoneHref": "tel:+916238573109",
+  "email": "alkasukumaran2015@gmail.com",
+  "priceRange": "₹₹",
+  "currency": "INR",
+  "foundedYear": 2015,
+  "founder": "Alka",
+  "instagram": "https://www.instagram.com/handworkbyalka",
+  "pinterest": "https://in.pinterest.com/alkasukumaran",
+  "whatsappUrl": "https://wa.me/917025746783",
+  "address": {
+    "street": "Thriprayar",
+    "city": "Thrissur",
+    "district": "Thrissur",
+    "region": "Kerala",
+    "postalCode": "680567",
+    "country": "IN",
+    "countryName": "India"
+  },
+  "geo": {
+    "latitude": 10.4138,
+    "longitude": 76.1189
+  },
+  "areaServed": [
+    "Thriprayar",
+    "Thrissur",
+    "Guruvayur",
+    "Chalakudy",
+    "Irinjalakuda",
+    "Mannarkkad",
+    "Kodungallur",
+    "Kochi",
+    "Perinthalmanna",
+    "Thrissur District",
+    "Palakkad",
+    "Malappuram",
+    "Ernakulam",
+    "Kottayam"
+  ],
+  "serviceAreaNote": "We work with clients across Thrissur district and all over Kerala. Orders can be taken in person at our Thrissur studio or over WhatsApp, and finished work is delivered anywhere in India.",
+  "services": [
+    {
+      "slug": "aari-work-design",
+      "name": "Aari Work Blouse Design",
+      "shortName": "Aari Work",
+      "tagline": "Hand stitched Aari embroidery on silk and cotton blouses",
+      "keywords": [
+        "aari work blouse design",
+        "aari embroidery",
+        "bridal aari work",
+        "heavy aari work blouse",
+        "simple aari work blouse design"
+      ],
+      "summary": "Full hand Aari embroidery on blouse fronts, necks and sleeves. Heavy bridal Aari, medium Aari and simple Aari work are all available, stitched completely by hand on a wooden frame with no machine help.",
+      "details": [
+        "Heavy bridal Aari work with zari, sequins and stones",
+        "Medium Aari work for wedding and reception blouses",
+        "Simple Aari work for everyday and office blouses",
+        "Custom design redrawn from your photo or reference image"
+      ],
+      "price": "from ₹850 per blouse",
+      "turnaround": "7 to 21 days depending on design density",
+      "faqs": [
+        {
+          "q": "What is the difference between heavy, medium and simple Aari work?",
+          "a": "Heavy Aari work fills the blouse with dense zari, sequin and stone embroidery and is meant for bridal blouses. Medium Aari work covers the front and neck with a balanced design for wedding and reception wear. Simple Aari work uses light thread and a small motif, and it is the practical option for everyday blouses."
+        },
+        {
+          "q": "Is Aari work done by hand or by machine?",
+          "a": "All our Aari work is stitched by hand on a wooden Aari frame. We do not use a sewing machine for the embroidery itself, which is why heavy Aari work takes 15 to 25 days per blouse."
+        },
+        {
+          "q": "How much does Aari work cost per blouse in Thrissur?",
+          "a": "Simple Aari work starts at about ₹850 per blouse and heavy bridal Aari work is ₹1,500 and above. Bulk orders for boutiques and tailor shops get a better rate per blouse, so send us your design list on WhatsApp for a quotation."
+        }
+      ]
+    },
+    {
+      "slug": "handworks-design",
+      "name": "Custom Handworks Blouse Design",
+      "shortName": "Hand Work",
+      "tagline": "South Indian hand work blouse designs made to order",
+      "keywords": [
+        "hand work blouse designs",
+        "custom blouse design",
+        "south indian hand work blouse",
+        "hand work blouse design kerala"
+      ],
+      "summary": "Hand work blouse designs stitched to your measurements and fabric. Send a reference photo on WhatsApp and we redraw the design for your blouse before stitching starts.",
+      "details": [
+        "Made to your measurements and fabric choice",
+        "Reference photos accepted from Pinterest, Instagram and WhatsApp",
+        "Works on silk, georgette, chanderi, cotton and organza",
+        "Single blouse and bulk boutique orders"
+      ],
+      "price": "from ₹650 per blouse",
+      "turnaround": "7 to 18 days depending on design density",
+      "faqs": [
+        {
+          "q": "How do I order a custom hand work blouse design?",
+          "a": "Send your blouse measurements, the fabric and a reference photo on WhatsApp. We redraw the design for your blouse, share a rough sketch for approval, then start the hand work. Most custom blouse orders are finished in 7 to 18 days."
+        },
+        {
+          "q": "Do you supply hand work blouses in bulk for boutiques?",
+          "a": "Yes. We are a B2B hand work studio and we supply boutiques and tailor shops in Thrissur, Kochi and across Kerala with hand work blouses at wholesale rates. We also stitch display samples for shop counters."
+        },
+        {
+          "q": "Can I get hand work on a blouse I already own?",
+          "a": "Yes, as long as the fabric suits embroidery. Send photos of the blouse and tell us the part you want worked on, and we will tell you what is possible and what it will cost."
+        }
+      ]
+    },
+    {
+      "slug": "hand-embroidery-beads-work",
+      "name": "Hand Embroidery and Bead Work",
+      "shortName": "Bead Work",
+      "tagline": "Beading, stone work and mirror work done by hand",
+      "keywords": [
+        "hand embroidery bead work",
+        "bead work blouse design",
+        "mirror work blouse",
+        "stone work embroidery"
+      ],
+      "summary": "Hand embroidery with beads, sequins, kundan stones, pearls and mirror work. Ideal for wedding guest blouses, half sarees, lehenga choli and saree fall and pico pieces.",
+      "details": [
+        "Bead, sequin, pearl and mirror work",
+        "Kundan and stone work for bridal blouses",
+        "Falls, pico and blouse borders",
+        "Repair and re-embroidery of old blouses"
+      ],
+      "price": "from ₹550 per blouse",
+      "turnaround": "5 to 15 days",
+      "faqs": [
+        {
+          "q": "What is included in hand embroidery and bead work?",
+          "a": "Bead work, sequin work, pearl work, mirror work and kundan or stone work, stitched by hand on blouse fronts, necks, sleeves, borders, saree fall and pico pieces."
+        },
+        {
+          "q": "How long does bead work take?",
+          "a": "A simple bead or mirror work blouse takes about 5 to 7 days. Bead work with kundan and stone work takes 10 to 15 days because each stone is fixed by hand."
+        },
+        {
+          "q": "Do you do mirror work and kundan work?",
+          "a": "Yes, mirror work and kundan or stone work are part of our hand embroidery service. These are popular for wedding guest blouses, lehenga cholis and Kerala Onam and Vishu outfits."
+        }
+      ]
+    },
+    {
+      "slug": "hand-thread-work-embroidery",
+      "name": "Hand Thread Work Embroidery",
+      "shortName": "Thread Work",
+      "tagline": "Fine thread work and chikankari style hand embroidery",
+      "keywords": [
+        "hand thread work embroidery",
+        "thread work blouse design",
+        "chikankari hand work",
+        "simple thread work blouse"
+      ],
+      "summary": "Fine thread work embroidery in cotton, silk and zari threads. This is the lightest and most affordable hand work, and it suits daily wear blouses and simple party wear.",
+      "details": [
+        "Cotton, silk and zari thread work",
+        "Chikankari style motifs and jaal patterns",
+        "Neck, sleeve and border embroidery",
+        "Most affordable hand embroidery option we offer"
+      ],
+      "price": "from ₹450 per blouse",
+      "turnaround": "4 to 12 days",
+      "faqs": [
+        {
+          "q": "Is thread work the same as chikankari?",
+          "a": "Our hand thread work uses the same light cotton and silk thread technique as chikankari, on cotton, silk and zari threads. It is our most affordable hand embroidery and it is the best choice for daily wear blouses and simple party wear."
+        },
+        {
+          "q": "What is the cheapest hand embroidery you do?",
+          "a": "Hand thread work embroidery is the cheapest, starting at about ₹450 per blouse. It is a good starting option if you want handmade blouse work but need an affordable rate."
+        },
+        {
+          "q": "How long does thread work take?",
+          "a": "Thread work takes about 4 to 7 days for a simple blouse and up to 12 days for a dense jaal pattern across the full front."
+        }
+      ]
+    },
+    {
+      "slug": "maggam-design-works",
+      "name": "Maggam Design Works",
+      "shortName": "Maggam Work",
+      "tagline": "Kerala maggam work and stone embroidery for blouses",
+      "keywords": [
+        "maggam work blouse design",
+        "kerala maggam work",
+        "stone work blouse",
+        "maggam work embroidery"
+      ],
+      "summary": "Maggam and stone work embroidery as it is traditionally done in Kerala. Popular for bridesmaid blouses, Onam and Vishu outfits and for shop display samples.",
+      "details": [
+        "Maggam and stone work as done in Kerala",
+        "Bridal and bridesmaid blouse work",
+        "Onam, Vishu and festival wear orders",
+        "Display samples for boutiques and shops"
+      ],
+      "price": "from ₹700 per blouse",
+      "turnaround": "7 to 20 days",
+      "faqs": [
+        {
+          "q": "What is maggam work?",
+          "a": "Maggam work is a Kerala style of stone and bead embroidery done by hand, where small stones and beads are set on the fabric and tied with thread. It is a traditional Thrissur and Kerala technique and it is usually seen on bridal and bridesmaid blouses."
+        },
+        {
+          "q": "Do you make maggam work for Onam and Vishu outfits?",
+          "a": "Yes. Maggam and stone work is very popular for Kerala Onam and Vishu outfits, wedding guest blouses and bridesmaid blouses. Send us the design and we will tell you the rate and the time needed."
+        },
+        {
+          "q": "Do you make display samples for shop counters?",
+          "a": "Yes, we stitch maggam and Aari work display samples for boutique and tailor shop counters in Thrissur and across Kerala. Display samples are a bulk order, so contact us on WhatsApp with the number of pieces you need."
+        }
+      ]
+    },
+    {
+      "slug": "bridal-makeup",
+      "name": "Bridal Makeup in Thriprayar",
+      "shortName": "Bridal Makeup",
+      "tagline": "Professional bridal makeover, HD makeup, saree draping & hairstyling in Thriprayar, Thrissur",
+      "keywords": [
+        "bridal makeup thriprayar",
+        "bridal makeup artist thrissur",
+        "wedding makeup thriprayar",
+        "bridal makeover kerala",
+        "hd bridal makeup thrissur",
+        "saree draping thriprayar"
+      ],
+      "summary": "Professional bridal makeup and bridal makeover services in Thriprayar, Thrissur. We offer HD bridal makeup, traditional Kerala bridal looks, engagement & reception makeovers, pre-bridal skincare, hair styling, and precision saree draping.",
+      "details": [
+        "HD & Airbrush bridal makeup using premium international cosmetics",
+        "Traditional Kerala Hindu, Christian & Muslim bridal looks",
+        "Bridal hairstyling, flower setting & accessories styling",
+        "Professional saree draping & box folding",
+        "Engagement, reception & pre-wedding makeover packages",
+        "On-location / venue makeover services across Thrissur district"
+      ],
+      "price": "from ₹3,500 per event",
+      "turnaround": "Advance booking recommended (available 7 days/week)",
+      "faqs": [
+        {
+          "q": "Do you provide bridal makeup at the wedding venue or home in Thriprayar?",
+          "a": "Yes! We provide on-location bridal makeup and makeover services at your home, hotel, or wedding venue in Thriprayar, Guruvayur, Kodungallur, and throughout Thrissur district."
+        },
+        {
+          "q": "What bridal makeup styles do you offer?",
+          "a": "We specialize in HD Bridal Makeup, Dewy & Matte finish looks, Traditional Kerala Kasavu Bridal looks, Muhurtham styling, Engagement looks, and glamorous Reception makeovers."
+        },
+        {
+          "q": "Is bridal saree draping and hairstyling included?",
+          "a": "Yes, our complete bridal packages include skin preparation, makeup, customized hairstyling, fresh flower placement, and elegant saree draping."
+        }
+      ]
+    },
+    {
+      "slug": "bridal-mehandi",
+      "name": "Bridal Mehandi Work in Thriprayar",
+      "shortName": "Bridal Mehandi",
+      "tagline": "Exquisite organic bridal henna, Arabic, Rajasthani & customized bridal mehandi in Thriprayar, Thrissur",
+      "keywords": [
+        "bridal mehandi thriprayar",
+        "bridal mehandi artist thrissur",
+        "mehandi artist thriprayar",
+        "arabic bridal mehandi kerala",
+        "organic henna thrissur",
+        "wedding mehendi thriprayar"
+      ],
+      "summary": "Customized bridal mehandi and henna design services in Thriprayar, Thrissur. Crafted with 100% natural, chemical-free organic henna for deep, rich dark stains. Featuring Arabic, Rajasthani, Indo-Western, bridal portrait, and intricate floral motifs.",
+      "details": [
+        "100% pure organic herbal henna cones for dark natural color",
+        "Full bridal hands (elbow length) & feet mehandi designs",
+        "Intricate Arabic, Rajasthani, Mandala, and Khafif designs",
+        "Custom love story & bridal portrait personalization",
+        "Sangeet & family group mehandi packages for wedding guests",
+        "Home service available in Thriprayar & surrounding Thrissur locations"
+      ],
+      "price": "from ₹1,500 for bridal sets",
+      "turnaround": "2 to 5 hours depending on design coverage",
+      "faqs": [
+        {
+          "q": "Do you use chemical-free organic henna for bridal mehandi in Thriprayar?",
+          "a": "Yes, we prepare and use only 100% natural, chemical-free organic henna cones that are completely skin-safe and guarantee a rich, dark mahogany stain."
+        },
+        {
+          "q": "How many days before the wedding should bridal mehandi be applied?",
+          "a": "We recommend getting your bridal mehandi done 2 days (48 hours) prior to your wedding day to achieve the deepest and richest color."
+        },
+        {
+          "q": "Do you take mehandi orders for bridesmaids and wedding guests?",
+          "a": "Yes, we offer special package deals for bridesmaids, family members, and Sangeet celebrations along with the bridal mehandi."
+        }
+      ]
+    }
+  ],
+  "extraServices": [
+    "Zardoshi and zari work",
+    "Mirror work",
+    "Cut work",
+    "Machine embroidery",
+    "Saree tassels and fringes",
+    "Blouse redesign and repairs"
+  ],
+  "faqs": [
+    {
+      "q": "Where is Handworks & Embroidery by Alka located?",
+      "a": "Our studio is located in Thriprayar, Thrissur, Kerala, India. We take orders in person at the studio and over WhatsApp, and we deliver finished hand work anywhere in India."
+    },
+    {
+      "q": "Do you take bulk orders from boutiques and tailor shops?",
+      "a": "Yes. We are a B2B hand work studio and we regularly supply boutiques and tailor shops across Thrissur, Kochi and the rest of Kerala. We also make display samples for shop counters. Send us your design list on WhatsApp for a rate quotation."
+    },
+    {
+      "q": "What is the price of a hand work blouse design?",
+      "a": "Custom hand work blouse designs start at about ₹450 per blouse for simple thread work and go up to ₹1,500 and above for heavy bridal Aari work with zari, sequins and stones. The final rate depends on design density, fabric and the number of blouses in the order."
+    },
+    {
+      "q": "How long does a hand work blouse order take?",
+      "a": "Simple thread work and bead work takes about 4 to 7 days. Medium Aari and maggam work takes 7 to 15 days. Heavy bridal Aari work takes 15 to 25 days. Rush orders can sometimes be taken with an advance, so ask us on WhatsApp."
+    },
+    {
+      "q": "Can you make a design from a photo I send on WhatsApp?",
+      "a": "Yes. Send a reference photo from Pinterest or Instagram on WhatsApp and we will redraw the pattern to fit your blouse size and fabric, then send you the final design for approval before stitching starts."
+    },
+    {
+      "q": "Which fabrics do you work on?",
+      "a": "We hand embroider on silk, raw silk, georgette, chanderi, tussar, cotton, organza and net. For bridal and heavy Aari work, silk and georgette are the most common choices."
+    },
+    {
+      "q": "Is hand work more expensive than machine embroidery?",
+      "a": "Hand embroidery costs more than machine embroidery because every stitch is done by hand, but it lasts far longer, can be repaired and reworked, and looks far richer on sarees, lehengas and bridal blouses. For boutique customers we often recommend hand work on display samples and machine work on bulk orders."
+    },
+    {
+      "q": "Do you deliver outside Kerala?",
+      "a": "Yes. We ship finished blouses and saree fall and pico pieces across India by courier, and we share progress photos on WhatsApp so you can check the work before it ships."
+    }
+  ]
+}
